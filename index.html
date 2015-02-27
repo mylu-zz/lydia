@@ -16,18 +16,22 @@
     if (num == 1) {
       correct = 8979;
       texthtml = "Will";
+      maphtml= "";
     }
     else if (num == 2) {
       correct = 3238;
       texthtml = "Will you";
+      maphtml = "";
     }
     else if (num == 3) {
       correct = 4626;
       texthtml = "Will you be";
+      maphtml = "";
     }
     else if (num == 4) {
       correct = 4338;
       texthtml = "Will you be my";
+      maphtml="";
     }
     
     if (code == correct) {
@@ -35,10 +39,10 @@
       html = texthtml; 
       $('#text').html(html); 
       $('#map').html(''); 
-      html = "map2"; 
+      html = maphtml;
       $('#map').html(html);
       $('#form').html('');
-      html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the secret code!\">";
+      html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
       html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num+1) + ")\">Submit</a>";
       html += "</form></p>";
@@ -46,7 +50,7 @@
     }
     else {
       $('#form').html('');
-      html = "<p><br>Nice try.<form><input type=\"text\" id=\"code\" placeholder=\"Enter the secret code!\">";
+      html = "<p><br>Nice try.<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
       html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num) + ")\">Submit</a>";
       html += "</form></p>";
@@ -61,7 +65,7 @@
   <body>
   <div class="wrapper"
       <header>
-      <h3>February 28, 2015</h3>
+      <h3>February 28, 2015 <3 </h3>
       </header>
       <br>
       <br>
@@ -71,7 +75,7 @@
       </div>
       <div id="form">
       <p>
-      <form><input type="text" id="code" placeholder="Enter the secret code!">
+      <form><input type="text" id="code" placeholder="Enter the code!">
             <a href="#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
       </form>
       </p>
