@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Lydia</title>
-
+    <script src="javascripts/main.js"></script>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,13 +18,18 @@
       <br>
       <br>
       <div id="text"></div>
-      <div class="iframe-rwd" id = "map">
+      <div class="iframe-rwd" id="map">
         <iframe width="425" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mapsengine.google.com/map/u/2/embed?mid=zuK1b1otyWls.k-j6QWYxnZ1w"></iframe>
       </div>
+      <div id="form">
+      <p>
       <form><input type="text" name="code" id="code" placeholder="Enter the secret code!">
             <input type="submit" value="Submit" onclick="processCode(document.getElementById('code').value)">
       </form>
+      </p>
+      </div>
     </div>
+    
       <footer>
       &copy; 2015 Max Lu. All Rights Reserved.
       </footer>
