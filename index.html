@@ -31,7 +31,18 @@
     }
     
     if (code == correct) {
-      $('#form').html('map2 woot');
+      $('#text').html(''); 
+      html = texthtml; 
+      $('#text').html(html); 
+      $('#map').html(''); 
+      html = "map2"; 
+      $('#map').html(html); 
+      $('#form').html(''); 
+      html = "<p>woot<form><input type=\"text\" name=\"code\" id=\"code\" placeholder=\"Enter the secret code!\">"; 
+      html += "<a href = \"#\" onclick=\"processCode(document.getElementById('code').value,"; 
+      html += String(num + 1) + ")\">Submit</a>"; 
+      html += "</form></p>"; 
+      $('#form').html(html);*/
     }
     else {
       $('#form').html('');
@@ -61,7 +72,7 @@
       <div id="form">
       <p>
       <form><input type="text" id="code" placeholder="Enter the secret code!">
-            <a href = "#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
+            <a href="#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
       </form>
       </p>
       </div>
