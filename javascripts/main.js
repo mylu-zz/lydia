@@ -33,6 +33,7 @@ function processCode(code, num) {
       html += "<input type=\"submit\" value=\"Submit\" onclick=\"processCode1(document.getElementById('code').value,";
       html += String(num + 1) + ")\">";
       html += "</form></p>";
+      $('#form').html(html);
     }
     else {
       $('#form').html('');
@@ -40,6 +41,7 @@ function processCode(code, num) {
       html += "<input type=\"submit\" value=\"Submit\" onclick=\"processCode1(document.getElementById('code').value,";
       html += String(num + 1) + ")\">";
       html += "</form></p>";
+      $('#form').html(html);
     }
   }
   
