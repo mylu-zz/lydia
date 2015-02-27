@@ -50,7 +50,7 @@
     }
     else {
       $('#form').html('');
-      html = <p>"Nice try.<br><form><input type=\"text\" name=\"code\" id=\"code\" placeholder=\"Enter the secret code!\">";
+      html = "<p>Nice try.<br><form><input type=\"text\" name=\"code\" id=\"code\" placeholder=\"Enter the secret code!\">";
       html += "<input type=\"submit\" value=\"Submit\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num) + ")\">";
       html += "</form></p>";
