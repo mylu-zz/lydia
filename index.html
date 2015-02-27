@@ -36,7 +36,7 @@
     else {
       $('#form').html('');
       html = "<p><br>Nice try.<form><input type=\"text\" id=\"code\" placeholder=\"Enter the secret code!\">";
-      html += "<a href =\"\" onclick=\"processCode(document.getElementById('code').value,";
+      html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num) + ")\">Submit</a>";
       html += "</form></p>";
       $('#form').html(html);
@@ -61,7 +61,7 @@
       <div id="form">
       <p>
       <form><input type="text" id="code" placeholder="Enter the secret code!">
-            <a href = "" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
+            <a href = "#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
       </form>
       </p>
       </div>
