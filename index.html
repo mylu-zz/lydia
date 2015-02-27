@@ -45,7 +45,7 @@
       
       $('#form').html('');
       html = "<p>woot<form><input type=\"text\" name=\"code\" id=\"code\" placeholder=\"Enter the secret code!\">";
-      html += "<a href = \"#\" onclick=\"processCode(document.getElementById('code').value,"
+      html += "<a href = \"#\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num + 1) + )\">Submit</a>";
       html += "</form></p>";
       $('#form').html(html);*/
@@ -54,7 +54,7 @@
       $('#form').html('');
       html = "<p><br>Nice try.<form><input type=\"text\" name=\"code\" id=\"code\" placeholder=\"Enter the secret code!\">";
       html += "<input type=\"submit\" value=\"Submit\" onclick=\"processCode(document.getElementById('code').value,";
-      html += "<a href = \"#\" onclick=\"processCode(document.getElementById('code').value,"
+      html += "<a href = \"#\" onclick=\"processCode(document.getElementById('code').value,";
       html += String(num) + )\">Submit</a>";
       html += "</form></p>";
       $('#form').html(html);
