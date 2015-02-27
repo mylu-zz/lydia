@@ -9,9 +9,8 @@
             <script src="javascripts/main.js">
             </script>
             
-    <script src="javascripts/main.js"></script>
     <script>
-      function processCode2(code, num) {
+      function processCode(code, num) {
     num = parseInt(num,10);
     code = parseInt(code,10);
     correct = -1;
@@ -76,8 +75,8 @@
       </div>
       <div id="form">
       <p>
-      <form><input type="text" name="code" id="code" placeholder="Enter1 the secret code!">
-            <a href = "#" onclick="processCode2(document.getElementById('code').value,1)">Submit</a>
+      <form><input type="text" name="code" id="code" placeholder="Enter the secret code!">
+            <a href = "#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
       </form>
       </p>
       </div>
