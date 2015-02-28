@@ -61,6 +61,14 @@
       $('#form').html(html);
     }
   }
+  
+  function showHints() {
+    $('#hints').html('');
+    html = "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
+    html += "<li>Tap on the map markers for more information</li>";
+    html += "<li>Don\'t refresh or press Go on the keyboard</li></ul>";
+    $('#hints').html(html);
+  }
   $(document).ready(function() {
   $(window).keydown(function(event){
     if(event.keyCode == 13) {
@@ -93,8 +101,7 @@
       </form>
       </p>
       </div>
-      <div id="hints"><a href="#" onclick="showHints()">Show Hints</a></div>
-      
+      <div id="hints"><a href="#" onclick="showHints()">Directions</a></div>
     </div>
     
       <footer>
