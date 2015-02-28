@@ -57,6 +57,14 @@
       $('#form').html(html);
     }
   }
+  $(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
     </script>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -76,7 +84,7 @@
       <div id="form">
       <p>
       <form>
-<input type="text" id="code" disabled="disabled" placeholder="Enter the code!">
+<input type="text" id="code" placeholder="Enter the code!">
             <a href="#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
       </form>
       </p>
