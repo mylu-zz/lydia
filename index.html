@@ -59,9 +59,9 @@
       $('#map').html(html);
       $('#form').html('');
       if (num == 5) {
-        html = "<form><input type=\"radio\" checked>YES<br><input type=\"radio\" checked>YES<br>";
-        html += "<input type=\"radio\" checked>reluctantly yes";
-        html += "<a href=\"#\" onclick=\"processYes().value\"";
+        html = "<form><input type=\"radio\" checked>YES<br><input type=\"radio\">YES<br>";
+        html += "<input type=\"radio\">reluctantly yes";
+        html += "<a href=\"#\" onclick=\"processYes().value\">&nbsp;&nbsp;Submit</a>";
       }
       else {
         html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
