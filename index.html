@@ -58,14 +58,16 @@
           html = "<form><input type=\"radio\" name=\"response\" checked>YES<br><input type=\"radio\" name=\"response\">YES<br>";
           html += "<input type=\"radio\" name=\"response\">reluctantly yes<br>";
           html += "<a href=\"#\" onclick=\"processYes().value\">&nbsp;&nbsp;Submit</a>";
+          $('#map').html(html);
+          $('#form').html('');
         }
         else {
           html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
           html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
           html += String(num+1) + ")\">&nbsp;&nbsp;Submit</a>";
           html += "</form></p>";
+          $('#form').html(html);
         }
-        $('#form').html(html);
       }
       else {
         $('#form').html('');
