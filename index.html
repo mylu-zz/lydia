@@ -8,6 +8,11 @@
             </script>
             
     <script>
+    
+    function processYes() {
+      maphtml = "<h1>WOOT!</h1>";
+      $('#map').html(maphtml);
+    }
       function processCode(code, num) {
     num = parseInt(num,10);
     code = parseInt(code,10);
@@ -37,6 +42,11 @@
 
    maphtml="<iframe width=\"425\" height=\"100%\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://mapsengine.google.com/map/u/1/embed?mid=zStoiTah-Kzw.kKtXI9APWem0\"></iframe>";
     }
+    else if (num == 5) {
+      correct = 3279;
+      maphtml = "";
+      texthtml = "<h2>Will you be my girlfriend?</h2>";
+    }
     
     if (code == correct) {
       $('#text').html(''); 
@@ -46,11 +56,19 @@
       html = maphtml;
       $('#map').html(html);
       $('#form').html('');
-      html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
-      html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
-      html += String(num+1) + ")\">&nbsp;&nbsp;Submit</a>";
-      html += "</form></p>";
+      if (num == 5) {
+        html = "<form><input type=\"radio\" checked>YES<br><input type=\"radio\" checked>YES<br>";
+        html += "<input type=\"radio\" checked>reluctantly yes";
+        html += "<a href=\"#\" onclick=\"processYes().value\"";
+      }
+      else {
+        html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
+        html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
+        html += String(num+1) + ")\">&nbsp;&nbsp;Submit</a>";
+        html += "</form></p>";
+      }
       $('#form').html(html);
+      }
     }
     else {
       $('#form').html('');
