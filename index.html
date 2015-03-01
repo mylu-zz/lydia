@@ -10,7 +10,8 @@
       $('#map').html('');
       maphtml = "<h1>WOOT!</h1>";
       $('#map').html(maphtml);
-      $('#html').html('');
+      $('#form').html('');
+      showHints(1);
     }
     
     function processCode(code, num) {
@@ -84,14 +85,18 @@
       }
     }
   
-    function showHints() {
+    function showHints(a) {
       $('#hints').html('');
-      html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
-      html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
-      html += "<li>Tap on the map markers for more information</li>";
-      html += "<li>Don't use the keyboard to submit, press the button</li>";
-      html += "<li>Don't refresh</li>";
-      html += "<li>If the map doesn't load, blame Google Maps (Linda!). Uhhh...well this is embarassing. Text me.</li></ul>";
+      if (a == 1)
+        html = "This really isn't too hard..";
+      else {
+        html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
+        html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
+        html += "<li>Tap on the map markers for more information</li>";
+        html += "<li>Don't use the keyboard to submit, press the button</li>";
+        html += "<li>Don't refresh</li>";
+        html += "<li>If the map doesn't load, blame Google Maps (Linda!). Uhhh...well this is embarassing. Text me.</li></ul>";
+      }
       $('#hints').html(html);
     }
   
@@ -120,7 +125,7 @@
         <h3>March 1, 2015 <3 </h3>
       </header>
       <div id="text"></div>
-      <div id="hints"><a href="#" onclick="showHints()">Directions</a></div>
+      <div id="hints"><a href="#" onclick="showHints(0)">Directions</a></div>
       <br>
       <div class="iframe-rwd" id="map">
         <iframe width="425" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mapsengine.google.com/map/u/1/embed?mid=zWKVTfLReALw.kSfuuaoL9Mp8"></iframe>
