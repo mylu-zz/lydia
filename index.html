@@ -61,15 +61,15 @@
         
         if (num == 5) {
           html = "<form><input type=\"radio\" name=\"response\" checked>YES<br><input type=\"radio\" name=\"response\">YES<br>";
-          html += "<input type=\"radio\" name=\"response\">reluctantly yes<br>";
-          html += "<a href=\"#\" onclick=\"processYes().value\">&nbsp;&nbsp;Submit</a>";
+          html += "<input type=\"radio\" name=\"response\">reluctantly yes<br><br>";
+          html += "<button type=\"button\"><a href=\"#\" onclick=\"processYes().value\">&nbsp;&nbsp;Submit</a></button>";
           $('#map').html(html);
           $('#form').html('');
         }
         else {
           html = "<p><br>Woot!<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
-          html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
-          html += String(num+1) + ")\">&nbsp;&nbsp;Submit</a>";
+          html += "<button type=\"button\"><a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
+          html += String(num+1) + ")\">&nbsp;&nbsp;Submit</a></button>";
           html += "</form></p>";
           $('#form').html(html);
         }
@@ -77,8 +77,8 @@
       else {
         $('#form').html('');
         html = "<p><br>Nope.<form><input type=\"text\" id=\"code\" placeholder=\"Enter the code!\">";
-        html += "<a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
-        html += String(num) + ")\">&nbsp;&nbsp;Submit</a>";
+        html += "<button type=\"button\"><a href=\"#\" onclick=\"processCode(document.getElementById('code').value,";
+        html += String(num) + ")\">&nbsp;&nbsp;Submit</a></button>";
         html += "</form></p>";
         $('#form').html(html);
       }
@@ -89,7 +89,8 @@
       html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
       html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
       html += "<li>Tap on the map markers for more information</li>";
-      html += "<li>Don\'t refresh or press Go on the keyboard</li></ul>";
+      html += "<li>Don't use the keyboard to submit, press the button</li>";
+      html += "<li>Don't refresh</li></ul>";
       $('#hints').html(html);
     }
   
@@ -127,7 +128,7 @@
       <p>
       <form>
         <input type="text" id="code" placeholder="Enter the code!">
-        <a href="#" onclick="processCode(document.getElementById('code').value,1)">Submit</a>
+        <button type=\"button\"><a href="#" onclick="processCode(document.getElementById('code').value,1)">Submit</a></button>
       </form>
       </p>
       </div>
