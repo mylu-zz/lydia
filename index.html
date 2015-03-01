@@ -102,13 +102,19 @@
 
     function showDirs() {
       $('#hints').html('');
-      html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
+      html = "<a href=\"#\" onclick=\"hideDirs()\">Hide Directions</a>";
       html += "<ul><li>This really isn't too hard...</li></ul>";
       $('#hints').html(html);
     }  
+    
     function hideHints() {
       $('#hints').html('');
       html = "<a href=\"#\" onclick=\"showHints()\">Directions</a>";
+      $('#hints').html(html);
+    }
+    function hideDirs() {
+      $('#hints').html('');
+      html = "<a href=\"#\" onclick=\"showDirs()\">Directions</a>";
       $('#hints').html(html);
     }
   
