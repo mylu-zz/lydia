@@ -64,10 +64,10 @@
   
   function showHints() {
     $('#hints').html('');
-    html = "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
+    html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
+    html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
     html += "<li>Tap on the map markers for more information</li>";
     html += "<li>Don\'t refresh or press Go on the keyboard</li></ul>";
-    html += "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
     $('#hints').html(html);
   }
   
