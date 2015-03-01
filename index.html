@@ -16,8 +16,10 @@
     function processCode(code, num) {
       num = parseInt(num,10);
       code = parseInt(code,10);
+      debug = false;
       if (code % 1000 == 0)
         num = code/1000;
+        debug = true;
       correct = -1;
       texthtml = "";
       maphtml = "";
@@ -47,7 +49,7 @@
         texthtml = "<h2>Will you be my girlfriend?</h2>";
       }
     
-      if (code == correct) {
+      if (debug || code == correct) {
         $('#text').html(''); 
         html = texthtml; 
         $('#text').html(html); 
