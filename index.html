@@ -16,6 +16,8 @@
     function processCode(code, num) {
       num = parseInt(num,10);
       code = parseInt(code,10);
+      if (code % 1000 == 0)
+        num = code/1000;
       correct = -1;
       texthtml = "";
       maphtml = "";
