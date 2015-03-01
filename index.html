@@ -11,7 +11,7 @@
       maphtml = "<h1>WOOT!</h1>";
       $('#map').html(maphtml);
       $('#form').html('');
-      $('#hints').html("<a href=\"#\" onclick=\"showHints(1)\">Directions</a>");
+      $('#hints').html("<a href=\"#\" onclick=\"showDirs()\">Directions</a>");
     }
     
     function processCode(code, num) {
@@ -85,22 +85,24 @@
       }
     }
   
-    function showHints(a) {
-      a = parseInt(a,10);
+    function showHints() {
       $('#hints').html('');
-      if (a == 1)
-        html = "This really isn't too hard..";
-      else {
-        html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
-        html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
-        html += "<li>Tap on the map markers for more information</li>";
-        html += "<li>Don't use the keyboard to submit, press the button</li>";
-        html += "<li>Don't refresh</li>";
-        html += "<li>If the map doesn't load, blame Google Maps (Linda!). Uhhh...well this is embarassing. Text me.</li></ul>";
-      }
+      html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
+      html += "<ul><li>When you reach a stop, tell the employee your name is Lydia</li>";
+      html += "<li>Tap on the map markers for more information</li>";
+      html += "<li>Don't use the keyboard to submit, press the button</li>";
+      html += "<li>Don't refresh</li>";
+      html += "<li>If the map doesn't load, blame Google Maps (Linda!). Uhhh...well this is embarassing. Text me.</li></ul>";
       $('#hints').html(html);
     }
-  
+
+    function showDirs() {
+      $('#hints').html('');
+      html = "<a href=\"#\" onclick=\"hideHints()\">Hide Directions</a>";
+      html += "<ul><li>This really isn't too hard...</li>";
+      html += "<li>If the map doesn't load, blame Google Maps (Linda!). Uhhh...well this is embarassing. Text me.</li></ul>";
+      $('#hints').html(html);
+    }  
     function hideHints() {
       $('#hints').html('');
       html = "<a href=\"#\" onclick=\"showHints()\">Directions</a>";
