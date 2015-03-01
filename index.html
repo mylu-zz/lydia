@@ -10,10 +10,12 @@
     <script>
     
     function processYes() {
+      $('#map').html('');
       maphtml = "<h1>WOOT!</h1>";
       $('#map').html(maphtml);
     }
-      function processCode(code, num) {
+    
+    function processCode(code, num) {
     num = parseInt(num,10);
     code = parseInt(code,10);
     correct = -1;
@@ -68,7 +70,6 @@
         html += "</form></p>";
       }
       $('#form').html(html);
-      }
     }
     else {
       $('#form').html('');
