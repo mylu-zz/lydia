@@ -11,7 +11,9 @@
       maphtml = "<h1>WOOT!</h1>";
       $('#map').html(maphtml);
       $('#form').html('');
-      $('#hints').html("<a href=\"#\" onclick=\"showDirs()\">Directions</a>");
+      $('#hints').html('');
+      hintshtml = "<a href=\"#\" onclick=\"showDirs()\">Directions</a>";
+      $('#hints').html(hintshtml);
     }
     
     function processCode(code, num) {
